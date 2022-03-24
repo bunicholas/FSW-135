@@ -20,24 +20,22 @@ storeRouter.get('/GetAll',function(req, res) {
       if (err) {
         res.send(err);
       } else {
-        res.send(result);
+        res.send(savedItem);
       }
     });
   });
 
-  storeRouter.put('/Handle',function(req, res) {
-    const newItem = new Inventory(req.body)
-    newItem.save((err, savedItem) =>{
-
+  storeRouter.put('/:id',function(req, res) {
+    Inventory.findOneAndUpdate({id:req.params.id},req.body,{new:true},(err,updateditem) => {
     if (err) {
       res.send(err);
     } else {
-      res.send(result);
+      res.send(updateditem);
     }
   });
 });
 
-storeRouter.delete('/Delete',function(req, res) {
+storeRouter.delete('/Delete/:id',function(req, res) {
     Inventory.findOneAndDelete(
         {id: req.params.id}, 
         (err, deletedItem) => {
