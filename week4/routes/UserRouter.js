@@ -13,7 +13,7 @@ UserRouter.get('/GetAll',function(req, res) {
     });
   });
 
-  UserRouter.post('/Handle',function(req, res) {
+  UserRouter.post('/Post',function(req, res) {
       const newItem = new User(req.body)
       newItem.save((err, savedItem) =>{
 
@@ -25,7 +25,7 @@ UserRouter.get('/GetAll',function(req, res) {
     });
   });
 
-  UserRouter.put('/:id',function(req, res) {
+  UserRouter.put('/Update/:id',function(req, res) {
     User.findOneAndUpdate({id:req.params.id},req.body,{new:true},(err,updateditem) => {
     if (err) {
       res.send(err);

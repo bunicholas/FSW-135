@@ -13,7 +13,7 @@ CommentRouter.get('/GetAll',function(req, res) {
     });
   });
 
-  CommentRouter.post('/Handle',function(req, res) {
+  CommentRouter.post('/Post',function(req, res) {
       const newItem = new Comment(req.body)
       newItem.save((err, savedItem) =>{
 

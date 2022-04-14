@@ -13,7 +13,7 @@ IssueRouter.get('/GetAll',function(req, res) {
     });
   });
 
-  IssueRouter.post('/Handle',function(req, res) {
+  IssueRouter.post('/Post',function(req, res) {
       const newItem = new Issue(req.body)
       newItem.save((err, savedItem) =>{
 
@@ -25,7 +25,7 @@ IssueRouter.get('/GetAll',function(req, res) {
     });
   });
 
-  IssueRouter.put('/:id',function(req, res) {
+  IssueRouter.put('/Update/:id',function(req, res) {
     Issue.findOneAndUpdate({id:req.params.id},req.body,{new:true},(err,updateditem) => {
     if (err) {
       res.send(err);
