@@ -31,3 +31,4 @@ AuthRouter.post('/signup',function(req, res) {
   });
 });
 
+module.exports = AuthRouter;

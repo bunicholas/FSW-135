@@ -1,0 +1,68 @@
+.App {
+  text-align: center;
+  justify-content: center;
+}
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: skyblue;
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  text-align: justify;
+  justify-content: space-around;
+  background-color: #1851b4;
+  padding: 1em;
+  margin: 0;
+}
+.link {
+  list-style-type: none;
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  margin: 0.5em;
+  transition: all 500ms;
+ 
+}
+
+.link:hover {
+  color: #fff582;
+  background-color: #2f71e4;
+}
+a:hover {
+  background-color: #2f71e4;
+
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+ 
+}
+.name-input-container {
+  margin: 1em;
+}
+@media(min-width: 250px) {
+  .navbar {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.App-link {
+  color: #61dafb;
+}
+
+li{
+  float: left;
+  justify-content: space-between;
+
+}
+ul{
+  display: flex;
+  list-style-type: none;
+  text-align: justify;
+  justify-content: space-between;
+  width: 100%;
+}

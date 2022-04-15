@@ -4,6 +4,7 @@ const morgan = require('morgan')
 const mongoose = require('mongoose')
 const { mainModule } = require("process")
 
+
 // Middleware (for every request) //
 app.use(express.json())
 app.use(morgan('dev'))
@@ -43,3 +44,5 @@ app.use((err, req, res, next) => {
 app.listen(9000, () => {
     console.log("The server is running on Port 9000")
 })
+
+module.exports = app

@@ -44,3 +44,5 @@ AuthRouter.post('/login',(req, res, next) => {
   return res.status(200).send({ token, user })
 
 })})
+
+module.exports = AuthRouter;
