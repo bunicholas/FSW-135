@@ -5,7 +5,7 @@ import Contact from './Contact.js'
 import Home from './Home.js'
 import './'
 import './Contact.js'
-import Axios from 'axios'
+import axios from 'axios'
 import {
   BrowserRouter,
   Routes,
@@ -19,6 +19,7 @@ function App() {
     <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About />}/>
           <Route path="/contact" element={<Contact />} />
+            <Route path="/Issue" element={<Issue/>} />
     </Routes>
 </BrowserRouter>
   );
